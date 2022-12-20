@@ -1,0 +1,33 @@
+app:
+    name: Redis
+    code: REDIS
+    notify: fjoy@ecloudcontrol.com
+build:
+    version: 7.0
+    env: DEV
+    build_file: none
+    output_files: output/*.zip
+    image_template: redis-7.0
+    
+deploy:
+    context: francisjoy/DEV
+    replicas: 1
+    type: statefulset
+    port:
+    - 6379
+    
+volumes:
+  - claim: redis7-data
+    mount: /data
+    name: data
+    size: 10Gi
+    
+properties:
+    REDIS_DEFAULT_PASSWD:
+       vault: REDISDEFAULTPASSWD
+    REDIS_USER_NAME: APPZ
+    REDIS_USER_PASSWD: 
+       vault: REDISPASSWD
+    REDIS_MAXMEMORY: 3gb
+    AUTH: False
+    revision : 0
