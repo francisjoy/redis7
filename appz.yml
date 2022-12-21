@@ -29,5 +29,5 @@ properties:
     REDIS_USER_PASSWD: 
        vault: REDIS_USER_PASSWD
     REDIS_MAXMEMORY: 3gb
-    AUTH: False
+    AUTH: True
     revision : 3
