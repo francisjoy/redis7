@@ -24,10 +24,10 @@ volumes:
     
 properties:
     REDIS_DEFAULT_PASSWD:
-       vault: REDISDEFAULTPASSWD
+       vault: REDIS_DEFAULT_PASSWD
     REDIS_USER_NAME: APPZ
     REDIS_USER_PASSWD: 
-       vault: REDISPASSWD
+       vault: REDIS_USER_PASSWD
     REDIS_MAXMEMORY: 3gb
     AUTH: False
     revision : 3
