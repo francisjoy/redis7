@@ -31,4 +31,4 @@ properties:
        vault: REDIS_USER_PASSWD
     REDIS_MAXMEMORY: 3gb
     AUTH: True
-    revision : 7
+    revision : 8
