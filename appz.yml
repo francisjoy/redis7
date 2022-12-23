@@ -14,8 +14,8 @@ deploy:
     replicas: 1
     type: statefulset
     ingress: none
-    #port:
-    #- 6379
+    port:
+    - 6379
     
 volumes:
   - claim: redis7-data
